@@ -9,6 +9,12 @@
     ],
     "homepage": "https://github.com/zelenin/yii2-rss",
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/findfido/rss-generator"
+        }
+    ],
     "authors": [
         {
             "name": "Aleksandr Zelenin",
