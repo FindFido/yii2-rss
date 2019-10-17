@@ -34,6 +34,11 @@ class RssView extends BaseListView
      * @var array
      */
     public $requiredItemElements = ['title', 'description', 'link', 'pubDate'];
+    
+    /**
+     * @var array
+     */
+    public $feedAttributes = [];
 
     /**
      * @var array
@@ -67,7 +72,7 @@ class RssView extends BaseListView
                 throw new InvalidConfigException('Required item attribute "' . $itemElement . '" must be set');
             }
         }
-        $this->feed = new Feed;
+        $this->feed = new Feed($this->feedAttributes);
     }
 
     /**
